@@ -1,33 +1,114 @@
-/* Stildefinitionen für die Anmeldeseite */
 body {
+    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
     text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 200px;
-    padding: 5px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
     margin-bottom: 10px;
-}
-
-button {
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
     padding: 10px 20px;
-}
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
 
-#errorDiv {
-    color: red;
-    margin-top: 10px;
-}
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button:before,
+  button:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 0;
+    pointer-events: none;
+  }
+  
+  button:before {
+    left: -50%;
+    transform: skewX(-30deg);
+    transform-origin: bottom left;
+  }
+  
+  button:after {
+    right: -50%;
+    transform: skewX(30deg);
+    transform-origin: bottom right;
+  }
+  
+  button:hover:before,
+  button:hover:after {
+    animation: glowing 1.5s infinite;
+  }
+  
+  @keyframes glowing {
+    0% {
+      transform: skewX(-30deg) scaleX(0);
+    }
+    50% {
+      transform: skewX(-30deg) scaleX(1);
+    }
+    100% {
+      transform: skewX(-30deg) scaleX(0);
+    }
+  }
+
+  
+  

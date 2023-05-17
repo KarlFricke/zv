@@ -11,6 +11,7 @@
     </header>
 
     <main>
+        <center>
         <h1>Registrierung</h1>
         <?php
         // Verbindung zur Datenbank herstellen
@@ -64,6 +65,7 @@
         </form>
 
         <p>Bereits registriert? <a href="index.php">Hier anmelden</a></p>
+    </center>
     </main>
 
     <footer>

@@ -12,19 +12,20 @@
 
     <main>
         <center>
-        <h1>UCP - Anmeldung</h1>
+        <div class="container">
+        <h1>Anmeldung</h1>
         <form id="loginForm" action="ucp.php" method="post">
-                <label for="username">Benutzername:</label>
-                    <input type="text" id="username" name="username" required>
+            <label for="username">Benutzername:</label>
+            <input type="text" name="username" id="username" required>
 
-                <label for="password">Passwort:</label>
-                    <input type="password" id="password" name="password" required>
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" required>
 
-            <input type="submit" value="Anmelden">
+            <button type="submit">Anmelden</button>
         </form>
-
         <p>Noch kein Konto? <a href="register.php">Jetzt registrieren</a></p>
         <div id="errorDiv"></div>
+    </div>
 </center>
     </main>
 
@@ -33,3 +34,9 @@
     </footer>
 </body>
 </html>
+
+
+
+
+
+

@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Überprüfen, ob der Benutzer angemeldet ist
+if (!isset($_SESSION['username'])) {
+    // Benutzer ist nicht angemeldet, zur Anmeldeseite weiterleiten
+    header("Location: index.php");
+    exit();
+}
+
+// Benutzer ist angemeldet, UCP-Seite anzeigen
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
