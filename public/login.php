@@ -17,12 +17,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $db->prepare("SELECT * FROM users WHERE username = :username");
+    // Datenbankabfrage anpassen
+    $stmt = $db->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
     $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':password', $password); // ACHTUNG: Das Passwort sollte gehasht und nicht im Klartext gespeichert sein!
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user && password_verify($password, $user['password'])) {
+    if ($user) {
         session_start();
         $_SESSION['username'] = $user['username'];
         $response = array('success' => true);
@@ -31,9 +33,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $response = array('success' => false, 'message' => 'Ungültige Anmeldeinformationen');
         echo json_encode($response);
     }
-} else {
-    // Falls die Anfrage nicht über POST erfolgt, sollte eine Fehlermeldung ausgegeben werden
-    $response = array('success' => false, 'message' => 'Ungültige Anfrage');
-    echo json_encode($response);
 }
 ?>
