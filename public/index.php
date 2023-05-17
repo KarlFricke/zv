@@ -7,11 +7,13 @@
 </head>
 <body>
 <div class="overlay" id="successOverlay"></div>
+
     <header>
         <!-- Header-Inhalt hier -->
     </header>
 
     <main>
+        
         <center>
         <div class="container">
         <h1>Anmeldung</h1>

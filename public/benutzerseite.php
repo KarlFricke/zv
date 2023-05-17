@@ -21,7 +21,7 @@
             echo "<p>Angemeldeter Benutzer: $username</p>";
         } else {
             // Weiterleitung zur Anmeldeseite
-            header("Location: login.php");
+            header("Location: index.php");
             exit();
         }
         ?>

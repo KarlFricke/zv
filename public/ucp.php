@@ -8,6 +8,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
+
 // Benutzer ist angemeldet, UCP-Seite anzeigen
 ?>
 
@@ -53,7 +54,7 @@ if (loginSuccess) {
     } else {
       clearInterval(fadeInInterval);
     }
-  }, 20); // Verkürzt auf 50 Millisekunden
+  }, 30); // Verkürzt auf 50 Millisekunden
 
   // Nach 0,5 Sekunden den Fade-Out-Effekt starten
   setTimeout(function() {
@@ -65,8 +66,8 @@ if (loginSuccess) {
         clearInterval(fadeOutInterval);
         successOverlay.style.display = "none";
       }
-    }, 20); // Verkürzt auf 50 Millisekunden
-  }, 200); // Verkürzt auf 500 Millisekunden
+    }, 30); // Verkürzt auf 50 Millisekunden
+  }, 300); // Verkürzt auf 500 Millisekunden
 }
 
     </script>

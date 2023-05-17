@@ -275,7 +275,7 @@ header {
   }
   
   nav ul li a.username {
-    background-color: #ff9800;
+    background-color: #1e27a5;
   }
   
   nav ul li a.logout {
@@ -285,4 +285,36 @@ header {
   nav ul li a:hover {
     opacity: 0.8;
   }
-  
+
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.role {
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.role.Admin {
+    background-color: red;
+    color: white;
+}
+
+.role.User {
+    background-color: green;
+    color: white;
+}
+
