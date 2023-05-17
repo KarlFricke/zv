@@ -6,12 +6,14 @@
     <script src="script.js"></script>
 </head>
 <body>
+<div class="overlay" id="successOverlay"></div>
     <header>
         <!-- Header-Inhalt hier -->
     </header>
 
     <main>
         <center>
+        <div class="container">
         <h1>Registrierung</h1>
         <?php
         // Verbindung zur Datenbank herstellen
@@ -65,11 +67,15 @@
         </form>
 
         <p>Bereits registriert? <a href="index.php">Hier anmelden</a></p>
+    </div>
     </center>
     </main>
 
     <footer>
         <!-- Footer-Inhalt hier -->
     </footer>
+    
+
+
 </body>
 </html>

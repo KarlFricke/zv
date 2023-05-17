@@ -6,6 +6,7 @@
     <script src="script.js"></script>
 </head>
 <body>
+<div class="overlay" id="successOverlay"></div>
     <header>
         <!-- Header-Inhalt hier -->
     </header>
@@ -32,6 +33,9 @@
     <footer>
         <!-- Footer-Inhalt hier -->
     </footer>
+
+    
+    
 </body>
 </html>
 
